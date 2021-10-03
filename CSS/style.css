@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 320px) {
+  body {
+    background-image: url(../IMG/bg-top.svg), url(../IMG/bg-bottom.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat;
+    background-color: #f6f6fe;
+  }
+  body header {
+    padding: 2em 0;
+  }
+  body header h1 {
+    text-align: center;
+  }
+  body header .price__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body header .price__toggle h5 {
+    margin: 0 1em;
+    color: #b3b5c6;
+  }
+  body header .toggle__switch {
+    display: inline-block;
+    position: relative;
+    height: 2.12em;
+    width: 3.75em;
+  }
+  body header .toggle__switch .toggle--input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  body header .toggle__switch .toggle--label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  body header .toggle__switch .toggle--label::before {
+    position: absolute;
+    height: 1.62em;
+    width: 1.62em;
+    left: 4px;
+    bottom: 4px;
+    content: "";
+    background-color: #f6f6fe;
+    transition: 0.5s;
+  }
+  body header .toggle__switch .toggle--input:checked + .toggle--label {
+    background-color: linear-gradient(to right, #a3a8f0, #696fdd);
+  }
+  body header .toggle__switch .toggle--input:focus + .toggle--label {
+    box-shadow: 0 0 1px #b3b5c6;
+  }
+  body header .toggle__switch .toggle--input:checked + .toggle--label::before {
+    transform: translateX(1.62em);
+  }
+  body header .toggle__switch .toggle--label {
+    border-radius: 2.12em;
+  }
+  body header .toggle__switch .toggle--label::before {
+    border-radius: 50%;
+  }
+  body main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5em 0;
+  }
+  body main .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 23.33em;
+    width: 16.66em;
+    background: #fff;
+    margin-bottom: 1em;
+    border-radius: 7px;
+  }
+  body main .card .card__title h3 {
+    color: #494c5f;
+    margin: 0;
+  }
+  body main .card .card__price {
+    margin: 0.5rem 0;
+  }
+  body main .card .card__price h1 {
+    margin: 0;
+    font-size: 3.1rem;
+  }
+  body main .card .card__plan {
+    margin: 1rem 0;
+  }
+  body main .card .card__plan .card__info {
+    width: 12.4em;
+    border: 1px solid #b3b5c6;
+    border-right: 0;
+    border-left: 0;
+    padding: 0.2em 0;
+  }
+  body main .card .card__plan .card__info h5 {
+    margin: 0;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: #494c5f;
+  }
+  body main .card .card__plan .mid {
+    border: none;
+  }
+  body main .card .card__btn .card--btn {
+    width: 15em;
+    padding: 0.5rem 0;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid #696fdd;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(to right, #a3a8f0, #696fdd);
+    color: #f6f6fe;
+  }
+  body main .card .card__btn .card--btn:hover {
+    border: 1px solid #696fdd;
+    background: none;
+    color: #696fdd;
+  }
+  body main .card__active {
+    background: linear-gradient(to right, #a3a8f0, #696fdd);
+    height: 24.44em;
+  }
+  body main .card__active .card__title h3 {
+    color: #f6f6fe;
+  }
+  body main .card__active .card__price h1 {
+    color: #f6f6fe;
+  }
+  body main .card__active .card__plan .card__info h5 {
+    color: #f6f6fe;
+  }
+  body main .card__active .card__btn .card--btn {
+    border: 1px solid #f6f6fe;
+    background: #f6f6fe;
+    color: #696fdd;
+  }
+  body main .card__active .card__btn .card--btn:hover {
+    border: 1px solid #f6f6fe;
+    background: none;
+    color: #f6f6fe;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  main .card {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  body main {
+    flex-direction: row;
+  }
+  body main .card {
+    margin-bottom: 0;
+    margin-right: 0.3em;
+  }
+}
